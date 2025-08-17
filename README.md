@@ -1,5 +1,6 @@
-# BME_Assignment
-# Protein 2D Structure Prediction
+# Protein 2D Structure Prediction (Minimal CNN Model)
+
+## This repository contains a minimal but complete pipeline for protein secondary structure prediction (Q3: Helix/Strand/Coil) using a convolutional neural network with residual dilated blocks. The workflow includes data collection from NCBI, preprocessing, model training with GIF-based visualization of weight evolution, and evaluation using confusion matrix and metrics.
 1. Data Preprocessing
 
 -FASTA download: Protein sequences are automatically fetched from NCBI using accession IDs.
