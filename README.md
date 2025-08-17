@@ -21,24 +21,36 @@
 
    ### Architecture:
 
-   #### -Embedding layer with learned positional parameters.
+   ### -Embedding layer with learned positional parameters.
 
-6 Residual Dilated Conv1D blocks (dilations [1,2,4,1,2,4], kernel=5).
+   ### -6 Residual Dilated Conv1D blocks (dilations [1,2,4,1,2,4], kernel=5).
 
-Head: Linear → GELU → Dropout → Linear (3-way classification).
+   ### -Head: Linear → GELU → Dropout → Linear (3-way classification).
 
-Training Details:
+   ### Training Details:
 
-Optimizer: Adam with weight decay (lr=3e-4, wd=1e-4).
+   ### -Optimizer: Adam with weight decay (lr=3e-4, wd=1e-4).
 
-Loss: Masked cross-entropy (ignores padding).
+   ### -Loss: Masked cross-entropy (ignores padding).
 
-Metric: Q3 accuracy.
+   ### -Metric: Q3 accuracy.
 
-Gradient clipping to 1.0.
+   ### -Gradient clipping to 1.0.
 
-Visualization:
+   ### Visualization:
 
-Per-epoch snapshots of embeddings, convolution kernels, and linear layers are stored as GIFs.
+   ### -Per-epoch snapshots of embeddings, convolution kernels, and linear layers are stored as GIFs.
 
-Training and validation curves for loss and accuracy are saved in plots/.
+   ### -Training and validation curves for loss and accuracy are saved in plots/.
+
+## 3. Evaluation
+
+   ### After training, the best checkpoint is reloaded for test evaluation.
+
+   ### -Confusion Matrix: Normalized confusion matrix (H, E, C) is generated.
+
+   ### -Metrics: Computed using scikit-learn.
+
+   ### -Overall Accuracy, Precision, Recall, F1-score (macro average).
+
+   ### -Per-class precision, recall, and F1 for H, E, and C.
