@@ -1,2 +1,2 @@
 # BME_Assignment
-Protein 2D Structure Prediction
+#Protein 2D Structure Prediction
