@@ -41,7 +41,7 @@
 
    ### -Per-epoch snapshots of embeddings, convolution kernels, and linear layers are stored as GIFs.
 
-   ### -Training and validation curves for loss and accuracy are saved in plots/.
+   ### -Training and validation curves for loss and accuracy are saved.
 
 ## 3. Evaluation
 
